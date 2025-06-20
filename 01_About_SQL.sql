@@ -7,7 +7,6 @@
       (1)CREATE: 생성
       (2)ALTER: 수정
       (3)DROP: 삭제
-      (4)TRUNC: 삭제의 한 종류
       
   2. DML(Data Manipulation Language)
     1)데이터 조작어

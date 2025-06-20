@@ -10,7 +10,7 @@
     DROP USER 사용자@호스트
     *@호스트 생략 가능
   3. 사용자에게 권한 부여
-    GRANT 권한종류 PRIVILEGSE ON 스키마.객체 TO 사용자@호스트
+    GRANT 권한종류 PRIVILEGSE ON 스키마.객체 TO 사용자@호스트          #스키마=데이터베이스
 */
 
 /*
@@ -38,3 +38,7 @@ DROP USER 'user_test'@'%';        # = DROP USER user_test;
 
 #5. db_test 데이터베이스 삭제하기
 DROP DATABASE IF EXISTS db_test;
+
+#수업에서 사용할 사용자 만들고 권한 부여하기
+CREATE USER 'goodee'@'%' IDENTIFIED BY 'goodee';
+GRANT ALL PRIVILEGES ON *.* TO 'goodee'@'%';
