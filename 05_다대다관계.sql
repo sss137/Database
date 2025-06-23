@@ -42,7 +42,7 @@ stud_id INT NOT NULL,
 subj_id INT NOT NULL,
 enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY(stud_id) REFERENCES tbl_student(student_id) ON DELETE CASCADE,
-FOREIGN KEY(subj_id) REFERENCES tbl_student(student_id) ON DELETE CASCADE,
+FOREIGN KEY(subj_id) REFERENCES tbl_subject(subject_id) ON DELETE CASCADE,
 UNIQUE KEY(stud_id, subj_id)       #학생 아이디와 과목 아이디 조합은 중복 불가능하도록 설정(한 학생이 한 과목을 중복 수강하지 못하도록)
 ) ENGINE=InnoDB;
 
