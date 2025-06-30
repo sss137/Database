@@ -34,7 +34,7 @@ SELECT AVG(salary) AS average
 FROM tbl_department d
 INNER JOIN tbl_employee e
 ON d.dept_id = e.dept_id
-GROUP BY d.dept_id, dept_name) a;
+GROUP BY dept_name) a;
 
 #직원아이디가 1003인 직원 정보와 전체 직원의 급여 평균을 함께 조회
 SELECT emp_id, dept_id, emp_name, position, gender, hire_date, salary, (SELECT AVG(salary) FROM tbl_employee)
